@@ -9,7 +9,6 @@
     ></script>
     <!-- jsFiddle will insert css and js -->
 
-
     <style>
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
@@ -34,14 +33,26 @@
   <script>
 
     function initMap() {
+      
       const map = new google.maps.Map(document.getElementById("map"), {
         zoom: 11,
         center: { lat: 41.876, lng: -87.624 },
       });
-      const ctaLayer = new google.maps.KmlLayer({
-        url: "https://googlearchive.github.io/js-v2-samples/ggeoxml/cta.kml",
+
+      const layer63301 = new google.maps.KmlLayer({
+        url: "https://raw.githubusercontent.com/jefftanz/map-testing/main/zip63301.kml",
         map: map,
       });
+
+      const layer63139 = new google.maps.KmlLayer({
+        url: "https://raw.githubusercontent.com/jefftanz/map-testing/main/zip63139.kml",
+        map: map,
+      });
+
+      ctaLayer.addListener("click", () => {
+        console.log('clicked on ')
+      });
+
     }
 
   </script>
