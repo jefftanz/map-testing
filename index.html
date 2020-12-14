@@ -33,7 +33,7 @@
   <script>
 
     function initMap() {
-      
+
       const map = new google.maps.Map(document.getElementById("map"), {
         zoom: 11,
         center: { lat: 41.876, lng: -87.624 },
@@ -49,8 +49,28 @@
         map: map,
       });
 
-      ctaLayer.addListener("click", () => {
-        console.log('clicked on ')
+      const layer63146 = new google.maps.KmlLayer({
+        url: "https://raw.githubusercontent.com/jefftanz/map-testing/main/zip63146.kml",
+        map: map,
+      });
+
+      const layer63045 = new google.maps.KmlLayer({
+        url: "https://raw.githubusercontent.com/jefftanz/map-testing/main/zip63045.kml",
+        map: map,
+      });
+
+      const layer63044 = new google.maps.KmlLayer({
+        url: "https://raw.githubusercontent.com/jefftanz/map-testing/main/zip63044.kml",
+        map: map,
+      });
+
+      const layer63043 = new google.maps.KmlLayer({
+        url: "https://raw.githubusercontent.com/jefftanz/map-testing/main/zip63043.kml",
+        map: map,
+      });
+
+      layer63301.addListener("click", () => {
+        console.log('clicked on layer 63301')
       });
 
     }
